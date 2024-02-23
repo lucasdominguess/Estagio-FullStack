@@ -1,0 +1,58 @@
+
+
+body{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div_input{ 
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#form{ 
+    gap: 10px;
+}
+#div_img{
+   
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.div_Perso { 
+    width: 300px;
+    height: auto;
+    padding: 10px;  
+}
+.img_Perso{ 
+    width: 100%;
+    height: auto;
+}
+
+
+#img1{ 
+    width: 100%;
+    height: auto;
+}
+#div_atkdef{ 
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items:space-between; */
+    gap: 10px;
+    padding: 10px;
+}
+#div_desc { 
+    padding: 10px;
+}
+.conteudo { 
+    padding: 10px;
+}

@@ -1,0 +1,53 @@
+SET key value [EX seconds]: Define o valor associado à chave. Se especificado, o parâmetro EX define um tempo de expiração em segundos.
+
+GET key: Retorna o valor associado à chave.
+
+DEL key [key ...]: Remove uma ou mais chaves do Redis.
+
+EXISTS key: Verifica se uma chave existe.
+
+TTL key: Retorna o tempo de vida restante de uma chave com tempo de expiração.
+
+KEYS pattern: Retorna todas as chaves que correspondem a um padrão.
+
+FLUSHDB: Limpa todos os dados de um banco de dados específico.
+
+FLUSHALL: Limpa todos os dados de todos os bancos de dados.
+
+EXPIRE key seconds: Define um tempo de expiração para uma chave específica em segundos.
+
+PERSIST key: Remove o tempo de expiração de uma chave, tornando-a persistente.
+
+LRU (Least Recently Used) eviction policy: Uma política de evicção que remove automaticamente os itens menos recentemente usados quando o limite de memória é atingido.
+
+SCAN cursor [MATCH pattern] [COUNT count]: Itera sobre as chaves do banco de dados.
+
+LPUSH key value [value ...]: Adiciona um ou mais valores no início de uma lista.
+
+RPUSH key value [value ...]: Adiciona um ou mais valores no final de uma lista.
+
+LPOP key: Remove e retorna o primeiro elemento de uma lista.
+
+RPOP key: Remove e retorna o último elemento de uma lista.
+
+SADD key member [member ...]: Adiciona um ou mais membros a um conjunto.
+
+SMEMBERS key: Retorna todos os membros de um conjunto.
+
+SREM key member [member ...]: Remove um ou mais membros de um conjunto.
+
+ZADD key score member [score member ...]: Adiciona um ou mais membros a um conjunto ordenado (sorted set) com uma pontuação associada.
+
+ZRANGE key start stop [WITHSCORES]: Retorna os membros de um conjunto ordenado dentro de um intervalo, opcionalmente com suas pontuações.
+
+HSET key field value [field value ...]: Define um ou mais campos e valores em um hash.
+
+HGET key field: Retorna o valor associado a um campo em um hash.
+
+HGETALL key: Retorna todos os campos e valores de um hash.
+
+PUBLISH channel message: Publica uma mensagem em um canal de mensagens.
+
+SUBSCRIBE channel [channel ...]: Assina um ou mais canais de mensagens.
+
+UNSUBSCRIBE [channel [channel ...]]: Cancela a assinatura de um ou mais canais de mensagens.

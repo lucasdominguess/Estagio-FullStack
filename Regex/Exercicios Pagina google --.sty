@@ -1,0 +1,131 @@
+-------------Exercicios Pagina google --------------------------
+
+1. ex deixando cpf de forma que o ponto seja opcional   
+
+\d{3}[\.]?\d{3}[\.]?\d{3}[\.]?\d{2} - deixando cpf de forma que o ponto seja opcional   
+
+
+
+1.2 . ex CPF com pontuação diferente ou espaços: 
+\d{3}[. -]?\d{3}[. -]?\d{3}[. -]?\d{2}   
+
+
+2 . Escreva uma regex capaz de encontrar no texto deste parágrafo todas as palavras que teriminam com a letra “o”.
+o\b  
+
+
+
+
+2.2 Escreva uma regex capas de encontrar no parágrafo acima todas as palavras que começam e terminam com vogais. 
+\b[aeiou]|[aeiou]\b
+
+3.1 horas e minutos 
+[0-2][0-3]:[0-5][0-9] 
+
+
+--------------------------------------EXERCICIOS -------------------------------------------------
+
+Correspondência de Números de Telefone: 
+Crie uma expressão regular para validar números de telefone no (DDD) 12345-6789.
+\d{9} >>>>> 975639351
+\d{3} \d{5}-\d{4}  >>>>>  011 94756-9821
+\d{3}|\(\d{3}\) \d{5}-\d{4} >>>>> (011) 94534-4532
+.?\d{2,3}.?\d{5}.?\d{4} 
+.?\d{2,3}.?.?\d{5}.?\d{4}
+\(?(\d{3}|\d{2})\)?[ -.](\d{5}[ -.]\d{4})|\d{7}[ -.]?\d{4} 
+\d{2}[-]?\d{4,5}[-]?\d{4}
+
+Validação de E-mail: 
+Desenvolva uma expressão regular para validar endereços de e-mail no formato "usuario@dominio.com".
+
+R: ([^ \p{P}]{1})([\w[_.-])*@(\w{5,7})(\.com|.gov|.net)(.br)?
+R: \w{1,15}\d{1,9}@\w*.(gov|com)
+R: [http:]?\.?\w{1,10}?\.\w{1,}\.(com|gov|net) >> url com http 
+
+Extração de Números de Série: 
+Escreva uma regex para extrair números de série no formato "ABC-1234-DE56". abc-1234-de56
+R: ([A-Z]{3}-\d{4}-[A-Z]{2}\d{2}) 
+
+Substituição de Palavras: 
+Crie uma expressão regular para substituir todas as ocorrências de "cachorro"
+" por "cachorro" em um texto.
+R:  crtl+f > alt+enter
+    
+Validação de Senhas:
+Desenvolva uma expressão regular para validar senhas com requisitos como no mínimo 8 caracteres, 
+pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.
+R:[^\p{P}\s]\w{8,}[@-_#]\w?%validação simples 
+(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#_])[0-9a-zA-Z$*&@#_]{8,}
+
+procurando Nome e sobrenome : 
+[A-Z][a-z]{1,} [A-Z][a-z]+
+procurando CEP 
+^\d{5}\-?\d{3}$ 
+
+vogais no final : 
+[aeiouAEIOU]\b\s 
+
+palavras com pontuação no final : 
+[[:alpha:]]*\p{P}
+
+Buscado codigo de rastreio com BR 
+\d{9}(BR|br)
+
+Buscando Placa de veiculo Normal & mercosul : 
+\W[A-Za-z]{3}-\d\w?\d{2}
+
+validando formatos de datas : 
+(0[1-9]|[12][0-9]|3[0-1])[ \/-]?(de)? ?(\d{2}|[A-Za-zç]{4,8})[- \/]?(de)? ?\d{4} 
+
+validando ip 
+((^|\.)(25[0-5]|2[0-4]\d |1\d\d|\d?\d)){4}$     
+
+Validando site : 
+R:(https|http|www):?\/?\/?\w*\.\w*\.?\w{3}?(.br)?
+00,
+procurando um nome especifico 
+r: jenifer(?=\s(?!domingues))  % nome 'jenifer' nao pode estar no plural . selecionado apenas nomes com sobrenomes diferentes de domingues 
+
+
+% 990-25189-2569
+% batata
+% 11-99829-2886 
+% jenifers 
+% jenifer silva 
+% jenifer santos 
+% jenifer gomes 
+% jenifer domingues 
+% texto aleatorio  >>> dica : use o atalho ctrl+k+c para comentar um texto , use ctrl+k+u para descomentar 
+% CPF como 772.843.809-34 
+% regex resultante deve casar com 77284380934.
+% 772 843 809 34   777-843-809-34 Eduardo Oliveira
+% Endereços IPv4 são formados por 4 octetos separados por :, e cada octeto é um número entre 0 e 255, por exemplo: 192.169.1.1. Note que 256 não é um octeto válido, mas 156 é. Escreva uma regex para validar apenas um octeto de IPv4.
+% O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online, você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional, o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si. Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.
+% Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter seu documento coordenado. Quando você clica em Design e escolhe um novo tema, as imagens, gráficos e elementos gráficos SmartArt são alterados para corresponder ao novo tema. Quando você aplica estilos, os títulos são alterados para coincidir com o novo tema. Economize tempo no Word com novos botões que são mostrados no local em que você precisa deles.
+% 011 94756-9821 (011) 94534-4532 1198585-8217 , 69 98287-8920 975639351
+% "Os cachorros são animais incrí veis. Sua independência e elegância os tornam animais de estimação adoráveis. Existem muitas raças de cachorro
+% s, desde os pequenos lucasdominguesNew123@
+%  e peludos até os grandes e majestosos. Ter um cachorro
+%  como companheiro pode trazer muita alegria e carinho
+%  para uma casa." Gustavo lima  ficticiaIni24@
+% % Tente resolver esses exercícios utilizando expressões regulares e aplique-os em um editor de texto ou em uma linguagem de programação
+%  que suporte regex para praticar e aprimorar suas habilidades.
+% %batata@gmail.com.br
+%batata234@gmail.com% dddddddddddddddd@gmail.com dyx-3945   def-5j90
+% % cachorro@yahoo.com.br  DYX-3945  
+% 2505199300Inu@d 25-05-1993 23/02/2012 1992/05/02 1995-12-01 
+% "as raposas podem ter varios cpf 123.456.789-00,098.765.462-10,12345678900,0987654321-10 21 de dezembro de 1088 , 13 julho 18888 , 15 março de 2019 
+% https:google.com
+% https://regex101.com helio 
+% www.google.com aboborab gato pato lucasdoming12
+% www.google234.com.br
+% www:google.com.br
+% % Joao Silva  123Test*
+% Test*123
+% % cachorrodominguesdadssadsadsadsadsad223425q3211-@gmail.com
+% % dddddddddddddddd@gmail.com
+% % cachorro@yahoo.com.br % batata-234@hotmail.com
+% batata@hao123.com
+% batata@gmail.com
+
+% 2505199300Inu@d 

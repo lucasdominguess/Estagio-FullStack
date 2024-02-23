@@ -1,0 +1,26 @@
+html , main { 
+    background-color: lightgrey;
+}
+
+
+.div1 {
+    padding: 50px;
+    margin: 50px;
+    background-color: black; 
+    width: 400px ;
+    height: 200px;
+    color: white;
+
+}
+.div2 { 
+    border : 1px red ;
+    padding: 10px; 
+}
+.p { 
+    border : 1px green ;
+    padding: 10px; 
+}
+.span { 
+    border : 1px rgb(0, 60, 128) ;
+    padding: 10px; 
+}

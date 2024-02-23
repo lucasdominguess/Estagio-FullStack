@@ -1,0 +1,164 @@
+﻿comandos linux
+
+wsl - entrar no linux atraves do prompt do windowns 
+sudo su - transformar emsuper usuario
+pwd - mostra o diretorio atual 
+man - manual do comando . 
+
+. = diretorio atual
+.. = diretorio anterior
+
+cd pasta1 navegando entre pastas
+cd ~ : retorna para pasta home     (cd : change direction) 
+cd - : retorna para pasta onde estava anteriormente . 
+cd + enter ... ir ate diretorio padrao do usuario 
+
+apt install "nome pacote " : instalar pacotes e programas 
+touch "nomearquivo.txt" - criar arquivo
+mkdir criar pasta e tbm vários diretorios(pastas) em sequencia para pastas dentro de pastas
+cat mostra o conteudo do arquivo
+rm = remover arquivo
+rm + -r apagar recursivamente . 
+mv nome do arquivo novonome  - renomeando 
+mv nomedoarquivo - destino para arquivo - movendo 
+cp  "caminho/do/arquivo+arquivo + . (destino)
+
+ls -l = lista longa (em vertical)
+ls -lr = lista de forma reversa (decrescente)
+ls -la = lista
+ls -lA = lista sem . e ..
+ls -lAt = ^ ordenada por tempo
+alias <- da um apelido ex. alias ll="ls -lA"
+wc -l : mostra linha dos arquivos 
+-a junto com ls mostra arquivos ocultos.
+sed -i. usado para substituir dados de um arquivo , podendo usar regex 
+nano = bloco de notas
+nano .bashrc = bloco de notas com alias
+--help : exibe documentação de comandos
+source = reload arquivo
+clear ou cls : comando para limpar terminal 
+
+ps - usado para saber os processos q estao rodando no sistema 
+0 entrada teclado 				
+1 saida de sucesso 
+2 considerado saida de erro 
+std in = input = teclado
+std out = output = monitorins
+
+
+apt install "nome pacote " : instalar pacotes e programas 
+touch "nomearquivo.txt" - criar arquivo
+mkdir criar vários diretorios(pastas) em sequencia para pastas dentro de pastas
+
+vim script.sh criar um script e apertando 'i' para comecar a editar
+bash : interpretador usado para executar de scripts ..
+bash ./script.sh = chamando e executando o script (necessita estar com a permissao x|1)
+
+#!/bin/bash  apontar caminho do bash para executar script
+:wq sair da tela vim (editor de texto)
+
+s /
+
+crtl+U atalho para apagar tudo q foi digitado na linha 
+
+ agora=$(date +'%d-%m-%Y %H:%M:%S') atribuindo hora atual a uma variavel para ultilizar dps 
+com aspas duplas para interpolar frase com variavel
+
+d=diretorio
+l=link simbolico
+-=arquivos
+egrep - padrao para aceitar regex na linha de comando 
+-c : contar resultado da busca 
+cut -d ";" -f 1 cortar parte do arquivo ex : primeira coluna da tabela 
+sort - ordernar um arquivo  
+cat tudo | sort | uniq -c  contando repetiçoes dos dados de um arquivo 
+
+r = read = 4
+w = write = 2
+x = executar = 1
+0 = permissão nenhuma
+
+-rw-rw-r--  (exemplo de trios primeiro trio Usuario | Grupos | resto usuarios)
+
+chmod +x 'nomearquivo' = adcionando permisao de execução 
+chmod = modificar permissoes do arquivo
+head = mostra cabeçalho com as primeiras linhas do conteudo
+tail = mostrar ultimas linhas de um arquivo 
+tail -n +2 ... para sleecionar a partir de qual linha mostrar 
+
+tree ... comando exibi arvore
+split  -2  'nome arquivo' 'novo_arquivo'
+ 
+
+
+
+history = historico de comandos utilizados
+script = armazena comando no terminal
+ 
+para ir para downloads = cd /mnt/c/Users/x492420/Downloads
+
+/mnt/c/Users/x492420/OneDrive$ cd /mnt/c/Users/x492420/OneDrive\ -\ rede.sp/Documentos/'lucas estagio'
+
+tar comando para compactar e descompactar arquivos 
+passando como flag -c = criar arquivo e compactar , v = verboso(mostrar a ação) f = espeficifar nome de arquivo de saida 
+parametro z de zip (usasr gz para zip ) 
+descompactando arquivo ... tar -xvf 'nomeNovoarq.tar'  
+sleep 1  - adcionar uma pausa para proximos comandos (passar num para qtd de tempo) 
+
+reset : limpa o terminal 
+
+find = procurar arquivos find /caminho/pasta/opcioanal -nome "nome_arquivo" 
+	-size +1MB usado para procurar arquivos maior q 1M
+	-mtime-5 buscar arquivos modificados nos ultimos 5 dias 
+	-type f buscar arquivos excluindo diretorios
+	
+find $(pwd) -iname newscript.sh	= exibir caminho de um arquivo
+kill -9 - matar um processo 
+shutdown - desligar ou reiniciar o sistema 
+ find $(pwd) -name newscript.sh
+ 
+script para ... newscript 
+comando copiar pasta para outra .. 
+usando crontab 
+uma vez por dia .. qlq hr 
+
+
+ df -h /dev/sdc para saber detalhes do caminho 
+ 
+ #!/bin/bash
+agora=$(date +'%d-%m-%Y %H:%M:%S')
+echo $agora
+echo 'verificando status...'
+sleep 1
+df -h /dev/sdc
+
+
+
+ script monitora : 
+ agora=$(date +'%d-%m-%Y %H:%M:%S')
+echo $agora
+echo 'verificando status...'
+sleep 1
+df -h /
+echo 'criando arquivo txt. com relatorio .... '
+df -h / > "log_"$(date +'%d_%H_%M_%S').txt
+sleep 1
+echo 'Arquivo criado com sucesso'
+
+script monitora atualizado .. 
+#!/bin/bash
+agora=$(date +'%d-%m-%Y %H:%M:%S')
+perc=$(df -h / | egrep -o '(Use)%|[0-1]?[0-9]{2}?%' )
+
+echo "Data" $agora "Percentual" $perc > relatorio.txt
+
+estudo egrep : grep encontrar strings egrep aceitar entrada regex
+-c Exibe uma contagem das linhas encontradas 
+-i ignora o caso (maiusculas e minusculas) 
+-n exibe as linhas enconstradas com respectivo numero de linha
+-v exibe as linhas que nao correspondam a regex 
+-r busca recursiva 
+-E interpretar a regex como uma empressao regular estendida (usar Egrep) 
+--color mostrar a saida colorida 
+
+which python3 = saber o cominho do executavel

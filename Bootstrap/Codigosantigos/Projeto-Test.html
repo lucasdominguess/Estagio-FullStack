@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="id-html" data-bs-theme="dark" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto-Teste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="media.css">
+<link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body class="wallpaper bg-opacity-25">
+  <div id="tudo">
+      <!-- Menu Hamburguer  --> 
+      <nav class="navbar bg-dark navbar-dark d-flex rounded-3 d-md-none ">
+          <div class="container-fluid">
+          
+      
+            <form class="d-flex ">
+              <input class="form-control me-2 text-bg-dark "  type="text">
+              <button class="test btn3 btn btn-primary">Pesquisar</button>
+            </form>
+      
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuCursos" aria-expanded="true">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="navbar-collapse collapse " id="menuCursos">
+                <br>
+                  <ul class="navbar-nav float-end text-end">
+                      <li class="nav-item">
+                          <a href="#tudo" class="nav-link ">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Destinos</a>
+                      </li>
+      
+                      <li class="nav-item">
+                          <a href="#painel" class="nav-link">Proximos voos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#" class="nav-link">Fale conosco</a>
+                      </li>
+      
+      
+                  </ul>
+              </div>
+      
+          </div>
+      </nav>
+
+ 
+      <div class="btn-group d-none d-md-inline-flex"> 
+        <button type="button" class="btn btn-dark">Home</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-dark dropdown-toggle "data-bs-toggle='dropdown'>
+          Destinos</button>
+          <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Rio de Janeiro</a>
+              <a href="#" class="dropdown-item">São Paulo </a>
+              <a href="#" class="dropdown-item">Belo Horizonte</a>
+              <a href="#" class="dropdown-item">Nova York </a>
+              <a href="#" class="dropdown-item">Ilhas Maldivas</a>
+              <a href="#" class="dropdown-item">Paris</a>
+            </div>
+      </div>
+          <button type="button" class="btn btn-dark">Proximos voos</button>
+          <button type="button" class="btn btn-dark">Contato</button>
+           
+        </div>
+
+     
+        <!-- Sessao carrosel   -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active "  data-bs-interval="10000">
+              <img src="Assets/img/paisagem (4).jpg" class="d-block w-100 imgpers " alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="Assets/img/paisagem5.jpg" class="d-block w-100 imgpers" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="">Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Assets/img/david-rodrigo-Fr6zexbmjmc-unsplash.jpg" class="d-block w-100 imgpers" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="textL">Third slide label</h5>
+                <p class="textL">Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+          <!-- Sessao card  --> 
+        <section class="cards d-flex justify-content-around flex-wrap"> 
+
+          <div class="card bg-dark text-white card1">
+            <div class="card-header">
+                <img src="Assets/img/paisagem (4).jpg" width="100%" alt="">
+            </div>
+            <div class="card-body text-center"><h5 class="persoFont">Maldivas</h5>
+            <p class="lead">Clique no botao Ver destino para exibir o modal </p></div>
+            <div class="card-footer d-flex">
+              <button type="button" class="btn btn3 btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                Ver Destino</button>
+             
+                    <!-- The Modal -->
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Exemplo de Modal</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                Este é um exemplo de modal . Podendo adcionar informaçoes extras no conteudo . sendo acionado atravez de um evento click no botao 
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+        
+            </div>
+            </div>
+        </div>
+           </div>
+          </div>
+      <!-- sessao card   -->
+          <div class="card bg-dark text-white card1" height="100px">
+            <div class="card-header">
+                <img src="Assets/img/paisagem (1).jpg" width="100%"  alt="">
+            </div>
+            <div class="card-body text-center" >
+              <h5 class="persoFont">Cancún</h5>
+              <p class="lead"> Classe lead usado no texto a seguir : 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nobis officia </p>
+              </div>
+            <div class="card-footer d-flex ">
+              <button class="btn btn3 btn-primary"> Ver Destino</button>
+              <button class="btn btn3 btn-primary"> + Opçoes </button>
+            </div>
+          </div>
+          
+          <div class="card bg-dark text-white card1" height="100px">
+            <div class="card-header">
+                <img src="Assets/img/paisagem5.jpg" width="100%"  alt="">
+            </div>
+            <div class="card-body text-center" >
+              <h5 class="persoFont">Dubai</h5>
+              <p class="lead"> Classe lead usado no texto a seguir : 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nobis officia </p>
+              </div>
+            <div class="card-footer d-flex ">
+              <button class="btn btn3 btn-primary"> Ver Destino</button>
+              <button class="btn btn3 btn-primary"> + Opçoes </button>
+            </div>
+          </div>
+
+          <div class="card bg-dark text-white card1 ">
+            <div class="card-header">
+                <img src="Assets/img/paisagem (2).jpg" width="100%" alt="">
+            </div>
+            <div class="card-body text-center" >
+              <h5 class="persoFont">Rio de Janeiro</h5> 
+              <p class="overflow-auto">. Lorem ipsum dolor sit amet consectetur adipisicing elit. Coorem ipsum dolor sit amet consectetur adipisicing elit. CoLorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nobis officia labore ducimus magni
+                 </p>
+                </div>
+              <button class="btn btn3 justify-content-center btn-primary"> Ver Destino</button>
+            </div>
+          </section>
+
+        <br>
+         <!-- Sessao barra de Carregamento  -->
+         <div class="container-fluid">
+      
+          <h2 class="persoFont textB ">Atualizando Painel... <span class="spinner-border text-primary"></span></h2>
+          <div class="progress " width="100%">
+      
+              <div id="pb1" class="progress-bar "style='width:50%'>50%</div>
+          </div>
+        </div>
+        <!-- Sessao paineis  -->
+        <section id="painel">
+  
+          <section class="tb2">
+            <h2 class="text-center persoFont textB">Painel de Viagens Nacional </h2>
+  
+            <table id="tabela" class="table table-dark table-hover table-striped ">
+               <thead>
+                   <tr>
+                       <th>Empresa</th>
+                       <th>Local</th>
+                       <th>Destino</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>Gol</td>
+                       <td>São Paulo</td>
+                       <td>Belo Horizonte</td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Tam</td>
+                       <td>Rio De Janeiro</td>
+                       <td>Salvador</td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Tam</td>
+                       <td>Brasilia</td>
+                       <td>Rio Grande do Sul </td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Gol</td>
+                       <td>Recife</td>
+                       <td>Minas Gerais</td>
+                   </tr>
+               </tbody>
+            </table>
+            <div class="div-btn">
+               <button class='btn btn3 btn-primary' onclick="document.getElementById('tabela').classList.remove('invisible')">Mostrar</button>
+               <button class='btn btn3 btn-primary' onclick="document.getElementById('tabela').classList.add('invisible')">Ocultar</button>
+            </div>
+          </section>
+  
+  <br><br>
+  
+          <section class="tb2">
+               <h2 class=" text-center persoFont textB">Painel de Viagens Internacional</h2>
+            <table id="tabela2" class="table table-striped table-hover">
+               <thead>
+                   <tr>
+                       <th>Empresa</th>
+                       <th>Local</th>
+                       <th>Destino</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>Latam Airlines</td>
+                       <td>São Paulo - BR</td>
+                       <td>Nova York - USA</td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Catar Airways</td>
+                       <td>Tokio - JPO </td>
+                       <td>Berlin - ALE</td>
+                   </tr>
+  
+                   <tr>
+                       <td>Emirates</td>
+                       <td>Moscou - RUS</td>
+                       <td>Paris - FRA </td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Latam Airlines</td>
+                       <td>Buenos Aires - ARG</td>
+                       <td>Barcelona - ESP</td>
+                   </tr>
+  
+  
+                   <tr>
+                       <td>Emirates</td>
+                       <td>Zurique - SUI</td>
+                       <td>Amsterdã - HOL</td>
+                   </tr>
+               </tbody>
+            </table>
+            <div class="div-btn ">
+                <button class='btn btn3 btn-primary' onclick="document.getElementById('tabela2').classList.remove('invisible')">Mostrar</button >
+                <button class='btn btn3  btn-primary' onclick="document.getElementById('tabela2').classList.add('invisible')">Ocultar</button>
+  
+            </div>
+          </section>
+        </section>
+
+        <!-- sessao proxima pagina -->
+        <section class="container-fluid ">
+          <br>
+          <ul class="pagination pagination-lg d-flex justify-content-center flex-wrap " >
+            
+              <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+         
+          </ul>
+        </section>
+      </div>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="script.js">
+      
+      </script>
+    </body>
+</html>

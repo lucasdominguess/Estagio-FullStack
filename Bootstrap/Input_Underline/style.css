@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin:0; 
+
+}:root { 
+  --var-color1-- : linear-gradient(120deg, rgba(0, 213, 255, 0.478) 0%, rgba(0, 209, 195, 0.231) 0%, rgba(0, 213, 255, 0.497) 50%);
+}
+li { 
+    list-style: none;
+}
+body { 
+  background-color: rgba(222, 218, 218, 0.729);
+}
+#main { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+#pesquisar{
+    border-radius: 7px;
+}
+
+.spanPerso{ 
+  font-weight: bold !important;
+  color: black
+}
+.cardPerso { 
+  padding: 5px;
+  background-color: rgba(222, 218, 218, 0.729);
+  border-radius: 8px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.894);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+#liPerso { 
+  border: 1px solid transparent ;
+  padding: 5px;
+  background-color: transparent
+}
+/* #liPerso:hover{ 
+  border: 4px solid rgb(4, 233, 153);
+  transition: 0.2s ease-in-out;
+  background-color: white; 
+} */
+.cardPerso:hover{
+
+  border-top: 4px solid rgb(0, 213, 255);
+  border-left: 4px solid rgb(0, 213, 255);
+  border-bottom: 4px solid rgba(3, 248, 232, 0.978);
+  border-right: 4px solid rgba(3, 248, 232, 0.978);
+  transition: 0.5s;
+
+  background-color: rgba(255, 255, 255, 0.764);
+  /* background: linear-gradient(120deg, rgba(0, 213, 255, 0.478) 0%, rgba(0, 209, 195, 0.231) 0%, rgba(0, 213, 255, 0.497) 50%); */
+ 
+}
+.div_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+.div_btn button { 
+  width: 30%;
+}
+.divCards{
+  height: 100vh;
+  
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+
+.bg-transp2 { 
+  background-color: rgba(222, 218, 218, 0.729);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.894);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+ 
+  border-top: 4px solid rgb(0, 213, 255);
+  border-left: 4px solid rgb(0, 213, 255);
+  border-bottom: 4px solid rgba(3, 248, 232, 0.978);
+  border-right: 4px solid rgba(3, 248, 232, 0.978);
+}
+.bg-transp { 
+  background: rgba(255, 255, 255, 0.391);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}

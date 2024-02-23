@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="container">
+        
+        <form id="form" action="" class="form">
+            <div id="quest_1" class="div_perso ">
+                <label id="label-1"for="quest1"class="">Pergunta 1:</label><br>
+                <div id=""class='d-flex div-option'>
+                    <input for="opcao" type="radio" id="option_sim" name="label-1" value="0" onclick="verificar('option_sim','idp2')"> SIM<br><br>
+                    <input for="opcao" type="radio" id="option_nao" name="label-1"value="1"> NAO<br><br>
+                </div>
+            </div>
+            <div id="opcoes" class="d-flex">
+                <div id="idp2" class="div_perso d-none">
+                    <label id="label-2"for="quest1"class="d-flex">Pergunta 2:</label><br>
+                    <div id=""class='d-flex div-option'>
+                        <input for="opcao" type="radio" id="p2" name="label-2" value="0" onclick="verificar('p2','idp3')"> SIM<br><br>
+                        <input for="opcao" type="radio" id="p2n" name="label-2"value="1"onclick="destruir('idp2')"> NAO<br><br>
+                    </div>
+                </div>
+               
+                <div id="idp3" class="div_perso d-none">
+                    <label id="label-3"for="quest1"class="d-flex">Pergunta 3:</label><br>
+                    <div id=""class='d-flex div-option'>
+                        <input for="opcao" type="radio" id="p3" name="label-3" value="0" onclick="verificar('p3','idp4')"> SIM<br><br>
+                        <input for="opcao" type="radio" id="p3n" name="label-3"value="1"onclick="destruir('idp3')"> NAO<br><br>
+                    </div>
+                </div>
+                <div id="idp4" class="div_perso d-none">
+                    <label id="label-4"for="quest1"class="d-flex">Pergunta 4:</label><br>
+                    <div id=""class='d-flex div-option'>
+                        <input for="opcao" type="radio" id="p4" name="label-4" value="0" onclick="verificar('p4','idp5')"> SIM<br><br>
+                        <input for="opcao" type="radio" id="p4n" name="label-4"value="1" onclick="destruir('idp4')">NAO<br><br>
+                    </div>
+                </div>
+                <div id="idp5" class="div_perso d-none">
+                    <label id="label-5"for="quest1"class="d-flex">Pergunta 5:</label><br>
+                    <div id=""class='d-flex div-option'>
+                        <input for="opcao" type="radio" id="p5" name="label-5" value="0" onclick="verificar('p5','idp6')"> SIM<br><br>
+                        <input for="opcao" type="radio" id="p5n" name="label-5"value="1"onclick="destruir('idp5')"> NAO<br><br>
+                    </div>
+                </div>
+                <div id="idp6" class="div_perso d-none">
+                    <label id="label-6"for="quest1"class="d-flex">Pergunta 6:</label><br>
+                    <div id=""class='d-flex div-option'>
+                        <input for="opcao" type="radio" id="p6" name="label-6" value="0"> SIM<br><br>
+                        <input for="opcao" type="radio" id="p6n" name="label-6"value="1"> NAO<br><br>
+                    </div>
+                </div>
+            
+        </div>
+        </form>
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <script src="home.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

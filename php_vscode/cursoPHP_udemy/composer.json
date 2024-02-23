@@ -1,0 +1,15 @@
+{
+    "name": "x492420/curso-php_udemy",
+    "autoload": {
+        "psr-4": {
+            "app\\":"POO/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lucas domingues"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

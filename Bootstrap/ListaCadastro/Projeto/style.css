@@ -1,0 +1,114 @@
+
+body { 
+    background-color: rgba(107, 120, 124, 0.454);
+
+}
+
+/* tr>td:first-child,tr>th:first-child {
+    display: none
+} */
+
+
+tr>td:nth-child(9),tr>th:nth-child(9) { 
+    display: none;
+}
+#main {
+    margin: 10;
+   padding: 20px;
+   border-radius: 10px;
+   
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+button:hover { 
+    background-color: rgb(11, 230, 227) !important;
+    border: 1px solid  rgb(11, 230, 227) !important;
+    
+}
+.h1s{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.bg-transp { 
+    background: rgba(255, 255, 255, 0.391);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.bg-transp2 { 
+  
+   background-color: rgba(222, 218, 218, 0.729);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.894);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+#div-sexo { 
+    
+    justify-content: start;
+    align-items: start;
+    gap :20px;
+    padding: 0px;
+    text-align: end;
+}
+.labelPerso { 
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    
+}
+.titlePerso { 
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Lemon', serif;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+.btn-cad{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table1 { 
+    min-width: 300px !important;
+}
+
+#barraPesq{
+    align-items: end;
+    justify-content: end;
+    width:300px;
+}
+#divpesq { 
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+#header { 
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    
+}
+#img {
+    height: auto;
+    width: 300px;
+}
+.cardPerso{
+
+    border-top: 4px solid rgb(0, 213, 255);
+    border-left: 4px solid rgb(0, 213, 255);
+    border-bottom: 4px solid rgba(3, 248, 232, 0.978);
+    border-right: 4px solid rgba(3, 248, 232, 0.978);
+    transition: 0.5s;
+}  

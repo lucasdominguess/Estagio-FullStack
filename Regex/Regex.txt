@@ -1,0 +1,210 @@
+\d{3}[\.]?\d{3}[\.]?\d{3}[\.]?\d{2} 
+
+
+
+\bn.*n\b  expressao regular usada  
+
+
+ 
+ 
+   
+Ponto . 
+    
+  	n.o             não, nao, ...
+	.eclado         teclado, Teclado, ...
+	e.tendido       estendido, extendido, eztendido, ...
+  
+Lista [...]
+  	n[ãa]o          não, nao
+	[Tt]eclado      Teclado, teclado
+	e[sx]tendido    estendido, extendido
+	12[:. ]45       12:45, 12.45, 12 45
+	<[BIP]>   <B>, <I>, <P>
+  
+Lista Negada [^...] - 
+  
+  
+? opcional  
+	fala[r!]?       falar, fala!, fala
+	
+Asterisco *  
+	para ele pode ter, não ter, ou ter vários, infinitos.
+	Em outras palavras, a entidade anterior pode aparecer em qualquer quantidade.
+	6*0             0, 60, 660, 6660, ..., 666666666660, ...
+	bi*p            bp, bip, biip, biiip, biiiip...
+	b[ip]*          b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
+
+O curinga .* 
+	é qualquer coisa! qualquer caractere em qualquer quantidade . 
+	 procurar acessos de usuários em uma data qualquer: 22/11/2001.*login.
+	
+
+Mais +  
+	6+0             60, 660, 6660, ..., 666666660, ...
+	bi+p            bip, biip, biiip, biiiip...
+	b[ip]+          bi, bip, biipp, bpipipi, biiiiip, bppp, ...
+	
+Chaves: o controle {n,m}
+	{1,3}   de 1 a 3
+{3,}    pelo menos 3 (3 ou mais)
+{0,3}   até 3
+{3}     exatamente 3
+{1}     exatamente 1
+{0,1}   zero ou 1    (igual ao opcional)
+{0,}    zero ou mais (igual ao asterisco)
+{1,}    um ou mais   (igual ao mais)
+	resumo : 
+	Chaves são precisas.
+	Você pode especificar um número exato, um mínimo, um máximo, ou uma faixa numérica.
+	As chaves simulam o *, o + e a ?.
+	
+Circunflexo: o início ^
+	Serve para procurar palavras no começo da linha.
+Cifrão: o fim $ 
+	Serve para procurar palavras no fim da linha.
+	
+Borda: a limítrofe \b  (nao entendi ) 
+	dia             dia, diafragma, radial, melodia, bom-dia!
+	\bdia           dia, diafragma, bom-dia!
+	dia\b           dia, melodia, bom-dia!
+	\bdia\b         dia, bom-dia!
+	
+	
+escape \  
+O escape escapa um metacaractere, tirando seu poder. podendo usar o caractere literal
+	exemplo formula para rg [0-9]\.[0-9]{3}\.[0-9]{3}-[0-9] 
+	
+Ou : o alternativo |
+	boa-tarde|boa-noite   se lê: "ou boa-tarde, ou boa-noite", ou seja "ou isso ou aquilo". 
+	
+Grupo: o pop (...) 
+ ex: caso esteja procurando o nome de um supermercado em uma listagem
+	e não sabe se este é um mercado, supermercado ou um hipermercado. (super|hiper)mercado
+	
+	
+retrovisores  \1 
+	O retrovisor só funciona se usado com o grupo.
+O retrovisor serve para procurar palavras repetidas.
+Numeram-se retrovisores contando os grupos da esquerda para a direita.
+
+POSIX:
+     [:upper:]  letras de A - Z podendo incluir Á È Ì Ó Û
+	 [:lower:]  letras de a - z podendo incluir á é ì ò ü
+	 [:alpha:]	letras de A - z sendo maiusculas e minusculas
+	 [:alnum:]  letras de A- z + numeros
+	 [:digit:]  números
+	 [:xdigit:] números hexadecimais
+	 [:punct:]	pontuação
+	 [:blank:] 	espaço e TAB
+	 [:space:]	caracteres em branco
+	 [:cntrl:]	caracteres de controle
+	 [:graph:]	caracteres imprimiveis
+	 [:print:] 	imprimieis e o espaço
+	 
+	 meta  mnemônico      dicas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  .   ponto          curinga de um caractere
+
+ []   lista          dentro todos são normais,
+                     traço é intervalo ASCII,
+                     [:POSIX:] tem acentuação
+
+[^]   lista negada   sempre casa algo, [^[:POSIX:]]
+
+  ?   opcional       guloso, 0 ou 1, pode ter ou não
+
+  *   asterisco      guloso, 0 ou mais,
+                     repete em qualquer quantidade
+
+  +   mais           guloso, 1 ou mais,
+                     repete em qualquer quantidade,
+                     pelo menos uma vez
+
+{,}   chaves         guloso, número exato, mínimo,
+                     máximo, ou uma faixa numérica
+
+  ^   circunflexo    casa o começo da linha,
+                     especial no começo da ER
+
+  $   cifrão         casa o fim da linha,
+                     especial no fim da ER
+
+ \b   borda          limita uma palavra
+                     (letras, números e sublinhado)
+
+  \   escape         escapa um meta, tira seu poder
+                     escapa a si mesmo \\
+
+  |   ou             indica alternativas,
+                     poder multiplicado pelo grupo
+
+ ()   grupo          agrupa, é quantificável,
+                     pode conter outros grupos
+
+ \1   retrovisor     usado com o grupo, máximo 9,
+                     conta da esquerda para direita
+
+ .*   curinga        qualquer coisa, o tudo e o nada
+
+ ??   opcional       não-guloso, 0 ou 1,
+                     casa o mínimo possível
+
+ *?   asterisco      não-guloso, 0 ou mais,
+                     casa o mínimo possível
+
+ +?   mais           não-guloso, 1 ou mais,
+                     casa o mínimo possível
+
+{}?   chaves         não-guloso, numérico,
+                     casa o mínimo possível
+					 
+			489255905-98		 
+					 
+	b-l    significado          similar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\a     alfabeto             [[:alpha:]]
+\A     não alfabeto         [^[:alpha:]]
+\h     cabeça de palavra    [[:alpha]_]
+\H     não cab. de palavra  [^[:alpha:]_]
+\l     minúsculas           [[:lower:]]
+\L     não minúsculas       [^[:lower:]]
+\u     maiúsculas           [[:upper:]]
+\U     não maiúsculas       [^[:upper:]]
+\o     número octal         [0-7]
+\O     não número octal     [^0-7]
+\B     não-borda
+\A     início do texto
+\Z     fim do texto
+\l     torna minúscula
+\L     torna minúscula até \E
+\u     torna maiúscula
+\U     torna maiúscula até \E
+\Q     escapa até \E
+\E     fim da modificação
+\G     fim do casamento anterior				 
+
+
+b-l    POSIX equiv.         mnemônico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\d      [[:digit:]]         dígito
+\D     [^[:digit:]]         não-dígito
+\w      [[:alnum:]_]        palavra
+\W     [^[:alnum:]_]        não-palavra
+\s      [[:space:]]         branco
+\S     [^[:space:]]         não-branco
+25836477982
+b-l    nome                 tradução
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\a     alert                alerta (bipe)
+\b     backspace            caractere Backspace
+\e     escape               caractere Esc
+\f     form feed            alimentação
+\n     newline              linha nova
+\r     carriage ret         retorno de carro
+\t     htab                 tabulação horizontal
+\v     vtab                 tabulação vertical
+
+
+114.333.444-19 
+\d{3}[\.]?\d{3}[\.]?\d{3}[\.]?\d{2}
