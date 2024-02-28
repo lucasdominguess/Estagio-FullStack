@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 //abistração ,encapsulamento , herança ,polimorfismo
 abstract class Pessoa { 
@@ -24,25 +25,22 @@ class Estagiario extends Pessoa{
     function __construct(string $nome)
     {
     parent::__construct($nome);
+
     }
+    
 
 }
 
 
 try {
-    $pessoa = new Estagiario('rafael');
+    $pessoa = new Estagiario('lucas');
     echo "vem do try ".$pessoa->nome;
 } catch (\Throwable $th) {
+    echo $th->getLine();
     echo $th->getMessage();
 }exit()
 
 // $pessoa->nome='lucas';
  
 
-
- 
-
 ?>
-
-
-

@@ -2,7 +2,8 @@
     "name": "x492420/curso-php_udemy",
     "autoload": {
         "psr-4": {
-            "app\\":"POO/"
+            "app":"POO-pt2" 
+       
         }
     },
     "authors": [

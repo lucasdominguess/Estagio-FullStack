@@ -1,11 +1,13 @@
 dica : nome de variavel 1 *camelCase* 2 *snake_case* 
-:: Operador de resoluçao de escopo ... 
+:: Operador de resoluçao de escopo ... para acessar metodos estaticos de uma classe sem precisar estancia-la 
+
+variaveis = propriedades , funçoes = metodos
 
 *include* : incluir outro arquivo php podendo selecionar uma variavel desse arquivo (em caso de erro o codigo continua)
 *required*: da mesma forma que include , porem em caso de erro ele interrompe a execução do script
 
 *include_once*: e para ter certeza que o modolo esta sendo incluido apenas uma vez .
-*riquired_once* : incluir e tbm em caso de erro exibir esse erro apenas uma vez 
+*required_once* : incluir e tbm em caso de erro exibir esse erro apenas uma vez 
 
 *gettype* : pegar o tipo de dado , retornando string /number 
 
@@ -27,8 +29,12 @@ assim vc tera acesso aquela variavel em outras partes do codigo
 
 *static* antes da variavel para q possamos usar a variavel depois da conclusao de uma funçao (sem isso variavel se perde na conclusao da funçao)
 
-*self::* -- para referenciar(printar) uma constante . nota! ela referencia a constante de escolpo local
-parent:: --para referenciar(printar) uma const da classe pai (herdeira)
+*self::* -- para referenciar(usar) uma constante/metodo da propria classe . nota! ela referencia a constante de escolpo local normalmente ultilizado em metodos staticos 
+
+parent:: --para referenciar(usar) uma const/metodos da classe pai (herdeira)
+
+*static::* referencia a metodos da classe de instancia (a variavel) caso nao exista o metodo , ele ira referenciar o metodo da classe pai 
+
 clone "nome_objeto" : clona objeto e seus valores . 
 
 *getMessage()* : mostra a mensagem de erro personalizada.
@@ -41,3 +47,13 @@ clone "nome_objeto" : clona objeto e seus valores .
     use nome_da_classe_traits; 
     para chamar metodos e atributos de uma traits usar $this->nome_atributo
     atalho para criar namespace da classe *crtl+alt+g*
+
+*metodos magicos* 
+*__set,__get,__call,__toString* 
+quando vc atribui um valor a um atributo q nao existe , ele invoca o metodo set e seta essa valor . 
+quando vc chama um atributo sem passar valor ele chama o metodo get . 
+
+declare(strict_types=1);
+
+*Codigos Composer*
+composer du -o
